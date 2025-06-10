@@ -16,3 +16,16 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+Hai folks !! 
+Here In this Portfolio Project I created few projects like :
+1.. Note Taking App
+2.. Currency Converter
+3.. Weather App
+4.. BMI - Calculator App 
+
+For Currency Converter and Weather App I used my personal API KEYS for my projects. Which API websites are avilable in !!! public domain Please login to your own account through signup and Generate your own keys they are obsolutely free to use.
+ - for Weather App to fetch current weather details
+# https://openweathermap.org/api  
+-  for Rate exchange
+# https://www.exchangerate-api.com/
