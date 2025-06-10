@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-wrapper slds-var-p-around_medium">
+        <h2 class="slds-var-m-bottom_medium">Salesforce Certifications</h2>
+       <lightning-layout multiple-rows > 
+         <template for:each={salesforceCertifications} for:item="certi">
+            <lightning-layout-item key={certi} class="slds-m-around_x-small" size="12" small-device-size="4" medium-device-size="3" padding="around-small">   
+            <div class="certificate">Preparing For {certi}</div>
+            </lightning-layout-item >
+            </template>
+        </lightning-layout>
+
+         <h2 class="slds-var-m-bottom_medium">Other Certifications</h2>
+       <lightning-layout multiple-rows > 
+        <template for:each={otherCertificates} for:item="certi"> 
+         <lightning-layout-item key={certi}  class="slds-m-around_medium" size="12" small-device-size="4" medium-device-size="3" padding="around-small">    
+            <div class="certificate" >{certi}</div>
+             </lightning-layout-item >
+        </template>
+ </lightning-layout>
+         
+    </div>
+    
+</template>

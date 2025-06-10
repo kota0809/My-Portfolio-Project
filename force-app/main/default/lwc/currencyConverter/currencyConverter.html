@@ -1,0 +1,51 @@
+<template>
+   <div class="currency-app">
+    <div class="container">
+        <div class="slds-card">
+       <form onsubmit={handleSubmit}>
+        <h1 class="slds-var-m-bottom_large">CURRENCY CONVERTER</h1>
+        <img src={currencyImg} height="150" width="150" alt="currency-converter-logo">
+
+         <lightning-input type="number" name="amount" value={amount} min="0" placeholder="Enter an amount" label="Amount" variant="label-hidden" class="slds-m-vertical_x-large " onchange={handleChange} required></lightning-input>
+        
+         <div class="slds-grid slds-gutters baseline slds-var-m-bottom_large">
+        <div class="slds-col">
+           <lightning-combobox
+            name="countryFrom"
+            label="From"
+            variant="label-hidden"
+            value={countryFrom}
+            placeholder="country From"
+            options={countryList}
+            onchange={handleChange} ></lightning-combobox>
+        </div>
+        <div class="slds-col slds-align-text_center">
+           <lightning-icon class="custom-icon" icon-name='action:change_record_type' size='small' title='convert-icon' ></lightning-icon>
+        </div>
+        <div class="slds-col">
+            <lightning-combobox
+            name="countryTo"
+            label="To"
+            variant="label-hidden"
+            value={countryTo}
+            placeholder="Country To"
+            options={countryList}
+            onchange={handleChange}></lightning-combobox>
+        </div>
+        </div>
+        <template if:true={result}>
+            <div class="result">
+                <h2>{amount}  {countryFrom}  =  {result}  {countryTo} </h2>
+            </div>
+        </template>
+         <template if:true={error}>
+            <div class="error slds-text-color_error">
+               {error}
+            </div>
+        </template>
+        <button type="submit" class="slds-button slds-button_neutral slds-button_stretch slds-m-vertical_x-large slds-var-m-top_medium"> CONVERT</button>
+       </form>
+        </div>
+    </div>
+   </div>
+</template>

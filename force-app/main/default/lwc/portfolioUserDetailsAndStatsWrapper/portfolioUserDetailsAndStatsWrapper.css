@@ -1,0 +1,26 @@
+:host() {
+    --light-blue: #4f7df9;
+    --light-white: #fafafa;
+    --dark-blue: #0b0d21;
+    --light-pink: #e91e63;
+    --dull-blue: #1d1e33;
+    --black: #000000;
+
+}
+
+.portfoliowrapper {
+    width: 100%;
+    background-color: var(--dull-blue);
+    padding: 16px;
+}
+
+
+@media (max-width: 720px) {
+
+    .portfoliowrapper {
+        padding: 16px;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+}

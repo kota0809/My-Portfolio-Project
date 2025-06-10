@@ -1,0 +1,24 @@
+<template>
+     <div class="slds-wrapper slds-var-p-around_medium">
+        <h2 class="slds-var-m-bottom_medium">Awards</h2>
+       <lightning-layout multiple-rows > 
+         <template for:each={awards} for:item="award">
+            <lightning-layout-item key={award} class="slds-m-around_small" size="12" small-device-size="4" medium-device-size="3" padding="around-small">   
+            <div class="box">{award}</div>
+            </lightning-layout-item >
+            </template>
+        </lightning-layout>
+
+         <h2 class="slds-var-m-bottom_medium">Languages</h2>
+       <lightning-layout multiple-rows > 
+        <template for:each={languages} for:item="language"> 
+         <lightning-layout-item key={certi}  class="slds-m-around_small" size="12" small-device-size="4" medium-device-size="3" padding="around-small">    
+            <div class="box" >{language}</div>
+             </lightning-layout-item >
+        </template>
+ </lightning-layout>
+         
+    </div>
+    
+</template>
+    

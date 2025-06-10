@@ -1,0 +1,25 @@
+h2 {
+    background-color: darkblue;
+    padding: 6px 16px;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.slds-wrapper {
+    width: 100%;
+}
+
+.box {
+    background-color: blanchedalmond;
+    width: 300px;
+    height: 100px;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}

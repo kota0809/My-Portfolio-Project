@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+    <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+
+    <targetConfigs>
+    <targetConfig targets="lightningCommunity__Default">
+    <property name="recordId" label="RecordId" type="String"></property>
+    <property name="objectApiName" label="Object API Name" type="String"></property>
+    <property name="resumeUrl" label="Resume Url" type="String"></property>
+     <property name="rank" label="Trailhead Rank" type="String"></property>
+      <property name="points" label="Trailhead Points" type="String"></property>
+       <property name="badges" label="Trailhead Badges" type="String"></property>
+              <property name="trails" label="Trailhead trails" type="String"></property>
+     </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,20 @@
+<template>
+    <lightning-record-view-form record-id={recordId} object-api-name={objectApiName} density="comfy">
+        <lightning-layout multiple-rows class="slds-wrap"> 
+            <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
+                <lightning-output-field field-name="Email__c"></lightning-output-field>
+            </lightning-layout-item >
+            <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
+                <lightning-output-field field-name="Phone_Number__c"></lightning-output-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
+                <lightning-output-field field-name="Address__c"></lightning-output-field>
+            </lightning-layout-item>
+             <lightning-layout-item size="12" small-device-size="4" medium-device-size="3">
+                <lightning-button label="Download Resume" icon-name="action:download" class="slds-var-m-top_large slds-var-m-left_small slds-var-m-bottom_medium" onclick={downloadResume}></lightning-button>
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-record-view-form>
+    
+</template>

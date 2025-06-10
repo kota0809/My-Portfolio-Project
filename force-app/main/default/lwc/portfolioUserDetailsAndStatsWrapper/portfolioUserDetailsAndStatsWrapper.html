@@ -1,0 +1,19 @@
+<template>
+
+    <div class="portfoliowrapper">
+        <lightning-layout multiple-rows class="slds-wrap">
+            <lightning-layout-item size="12" >
+                <template if:true={recordId}>
+                <c-profile-user-details-controller record-id={recordId} object-api-name={objectApiName}  resume-url ={resumeUrl} >
+                </c-profile-user-details-controller>
+                </template>
+            </lightning-layout-item>  
+            <lightning-layout-item size="12" class="slds-var-m-top_large" >
+                <template if:true={rank}>
+                <c-trialhead-stats-controller badges={badges} trails={trails} rank={rank} points={points} >
+                </c-trialhead-stats-controller>
+                </template>
+            </lightning-layout-item>  
+            </lightning-layout>
+        </div>
+</template>

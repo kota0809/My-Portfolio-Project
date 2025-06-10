@@ -1,0 +1,22 @@
+.accordion-wrapper {
+    background-color: white;
+}
+
+.show-tabs-on-mobile-view {
+    display: block;
+}
+
+.show-accordion-on-mobile-view {
+    display: none;
+}
+
+@media(max-width :1024px) {
+    .show-tabs-on-mobile-view {
+        display: none;
+    }
+
+    .show-accordion-on-mobile-view {
+        display: block;
+    }
+
+}

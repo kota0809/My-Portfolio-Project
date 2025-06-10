@@ -1,0 +1,56 @@
+<template>
+    <div class="weather-app center">
+        <div class="app-card">
+            <header class="center slds-var-m-bottom_large">
+                <template if:true={response}>
+                <img src={arrowbackIcon} class="arrow-back" alt="gotoback" height="40px" width="40px" onclick={handleClick}>
+                </template>
+                <h1>Weather App</h1>
+            </header>
+            <!--It will available to view when respone is empty to enter the city/location in form -->
+            <template if:true={loadingText}>
+                <div class={loadedClasses}>{loadingText}</div>
+            </template>
+            <template if:false={response}>
+            <section class="slds-var-m-around_large">
+            <form onsubmit={submitHandler}>
+            <input type="text" class=" slds-var-m-bottom_large" name="cityname" value={cityname} onkeyup={changeHandler}  placeholder="Enter a city name" required spellcheck="false">
+            <button type="submit" class="custom-button">Search</button>
+            </form>
+            </section>
+            </template>
+<!--if response is available then it's shoew the result and on clicking the back-arrow it will return to home form-->
+            <template if:true={response}>
+                <section class="slds-var-m-arround_large slds-text-align_center">
+             <img src={loadedIcon} alt="weatherIcon"  width="125px">
+            <div class="temperature">
+                <span>{response.temperature}</span>
+                <span>°</span>C
+            </div>
+            <div class="description">{response.description}</div>
+            <div class="location">
+                 <img src={mapIcon} alt="locationIcon">
+                <span> {response.location}</span>
+            </div>
+            <footer class="slds-var-m-top_large myfoot">
+                <div class="feelslike">
+                    <div>
+                         <img src={thermometerIcon} alt="tempIcon" >
+                        <div>{response.feels_like}°C</div>
+                        <p>feels_like</p>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <div>
+                        <img src={dropletIcon} alt="dropletIcon">
+                          <div>{response.humidity}</div>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </footer>
+            </section>
+            </template>
+        </div>
+    </div>
+    
+</template>
